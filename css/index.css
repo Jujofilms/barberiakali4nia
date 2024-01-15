@@ -9,7 +9,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh; /* Establecer el mínimo alto del cuerpo como 100% de la ventana gráfica */
-    margin: 0; /* Eliminar el margen predeterminado del cuerpo 
+    margin: 0; /* Eliminar el margen predeterminado del cuerpo */
 }
 
 .navbarPrincipal {
@@ -148,7 +148,7 @@ body {
 .textPrincipal .centro:after {
     content: "";
     display: block;
-    margin-left: 198px;
+    margin: auto;
     height: 3px;
     width: 0px;
     transition: all 0.5s ease;
@@ -208,16 +208,16 @@ body {
 .textSecundario .centro-1:after {
     content: "";
     display: flex;
-    margin-left: 237px;
+    margin: auto;
     height: 3px;
-    width: 0px;
+    width: 0;
     transition: all 0.5s ease;
 }
 
 .textSecundario .centro-1:hover::after {
     width: 27%;
     background: #000000;
-    margin: px auto;
+    margin: p auto;
 }
 
 
@@ -261,10 +261,12 @@ body {
     width: 100%;
     background-color: #000000;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    height: 200px;
+    text-align: center;
+    height: 200px auto;
     margin-top: 20px;
+    padding: 20px;
 }
 
 
