@@ -9,7 +9,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh; /* Establecer el mínimo alto del cuerpo como 100% de la ventana gráfica */
-    margin: 0; /* Eliminar el margen predeterminado del cuerpo */
+    margin: 0; /* Eliminar el margen predeterminado del cuerpo 
 }
 
 .navbarPrincipal {
