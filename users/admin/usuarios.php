@@ -50,6 +50,7 @@ $result = mysqli_query($conexion, $query);
         <table>
             <thead>
                 <tr>
+                    <th>Imagen</th>
                     <th>Nombre</th>
                     <th>Correo</th>
                     <th>Barbero</th>
