@@ -92,7 +92,7 @@
     <!-- pie de pagina -->
     <footer class="footer">
         <div class="info">
-            <h1>hola</h1>
+            <h1></h1>
         </div>
         <div class="contactanos"></div> 
         <div class="redesSociales">
