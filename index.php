@@ -89,7 +89,6 @@
     </main>
 
     <!-- pie de pagina -->
-    <div style="height: 200px;"></div>
     <footer class="footer">
         <div class="info">
             <h1>hola</h1>
