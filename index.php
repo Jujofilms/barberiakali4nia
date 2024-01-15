@@ -87,6 +87,7 @@
             </div>
         </section>
     </main>
+    <div class="spacer"></div>
 
     <!-- pie de pagina -->
     <footer class="footer">
