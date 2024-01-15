@@ -91,8 +91,10 @@
     <!-- pie de pagina -->
     <div style="height: 200px;"></div>
     <footer class="footer">
-        <div class="info"></div>
-        <div class="contactanos"></div>
+        <div class="info">
+            <h1>hola</h1>
+        </div>
+        <div class="contactanos"></div> 
         <div class="redesSociales">
             <!-- Whatsapp -->
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
