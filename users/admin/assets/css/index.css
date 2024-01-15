@@ -1,0 +1,123 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #000000;
+    overflow: hidden;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.navbar .menu-icon:hover{
+    color: green;
+}
+
+.navbar .menu-icon{
+    font-size: 25px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    cursor: pointer;
+}
+
+.navbar a {
+    color: #f2f2f2;
+    text-decoration: none;
+    padding: 14px 16px;
+    text-align: center;
+    display: block;
+}
+
+.navbar a:hover {
+    background-color: green;
+    border-radius: 10px;
+    color: white;
+}
+
+.logout-button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12% 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.logout-button:hover {
+    background-color: #d32f2f;
+}
+
+.navbar .menu-icon {
+    color: white;
+}
+
+/* Estilos para el botón de agregar usuarios */
+.btn-agregar-usuarios {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    align-items: center;
+    text-align: center;
+}
+
+.btn-agregar-usuarios button {
+    background-color: orange;
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estilos responsivos */
+@media screen and (max-width: 800px) {
+    .navbar a:not(.menu-icon) {
+        display: none;
+    }
+
+    .navbar.show-menu a {
+        display: block;
+    }
+
+    .btn-agregar-usuarios button {
+        width: 100%; /* Hacer el botón ocupar el 100% del ancho en dispositivos móviles */
+    }
+
+    .navbar{
+        display: fixed;
+    }
+
+    .navbar.show-menu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar.show-menu .logout-button {
+        width: auto;
+        /* Mantener el ancho original en dispositivos móviles */
+    }
+
+    .navbar a {
+        width: auto;
+    }
+}
+
+/* Ocultar el icono de menú en pantallas más grandes (PC) */
+@media screen and (min-width: 801px) {
+    .navbar .menu-icon {
+        display: none;
+    }
+
+    .navbar{
+        display: flex;
+    }
+}

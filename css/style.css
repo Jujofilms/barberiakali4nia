@@ -1,0 +1,90 @@
+/*--------------------------------fondo de la pagina----------------------------------*/
+body {
+    margin: 0;
+    background-image: linear-gradient(rgba(9, 9, 9, 0.950), rgba(9, 9, 9, 0.500)),
+    url(../img/fondo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;  
+}
+
+/*---------------------------------cuerpo del fomulario-------------------------------*/
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.formulario-login {
+    text-align: center;
+}
+
+.formulario {
+    background-color: white;
+    width: 80%;
+    max-width: 400px; /* Limita el ancho del formulario */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    box-sizing: border-box;
+}
+
+.formulario h1 {
+    color: black;
+    font-family: 'Exo 2', sans-serif;
+}
+
+.formulario form {
+    width: 100%;
+}
+
+.formulario form input {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 20px 0;
+    padding: 15px;
+}
+
+.formulario form button {
+    background-color: yellowgreen;
+    padding: 10px;
+    border-radius: 15px;
+    border: none;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+}
+
+.formulario form button:hover {
+    background-color: green;
+    color: white;
+}
+
+.formulario a {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 15px;
+    margin-top: 5px;
+    text-align: center;
+    background-color: red;
+    color: white;
+    padding: 4% 10.1%;
+    text-decoration: none;
+    border-radius: 15px;
+    display: block;
+}
+
+.formulario a:hover{
+    background-color: green;
+    padding: 4.3% 10.3%;
+}
+
+/* Estilos adicionales para hacer el diseño responsive */
+@media screen and (max-width: 600px) {
+    .formulario {
+        width: 90%;
+        padding: 15px;
+    }
+}
