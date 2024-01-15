@@ -81,7 +81,7 @@
                     laboriosam voluptatum, nesciunt corporis. Saepe nesciunt ut cupiditate. Explicabo, inventore facere.
                     Incidunt qui illum eum amet sunt.
                 </p>
-                <button onclick="servicio();">Conoce Nuestros Servicios</button>
+                <button onclick="servicio();">Conoce Nuestros Servicio</button>
                 <img src="img/text-secundary.jpg" alt="">
 
             </div>
@@ -92,7 +92,7 @@
     <!-- pie de pagina -->
     <footer class="footer">
         <div class="info">
-            <h1>hola</h1>
+            <h1></h1>
         </div>
         <div class="contactanos"></div> 
         <div class="redesSociales">
