@@ -19,6 +19,7 @@ body {
     justify-content: space-around;
     align-items: center;
     transition: all 800ms ease;
+    margin: auto;
 }
 
 .navbarPrincipal .img-logo {
@@ -139,10 +140,15 @@ body {
 }
 
 .textPrincipal .centro {
-    display: inline-block;
-    color: #0600ff;
-    text-decoration: none;
+    color: #eaff00;
+    font-weight: 700;
     font-size: 40px;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    text-align: center;
+    padding: 50px 0 0 0;
+    margin-left: -25px;
+    text-shadow: 3px 3px 6px #000000;
 }
 
 .textPrincipal .centro:after {
@@ -158,16 +164,6 @@ body {
     width: 42%;
     background: #000000;
     margin: px auto;
-}
-
-
-.textPrincipal .centro {
-    grid-column: 1/2;
-    grid-row: 1/2;
-    text-align: center;
-    padding: 50px 0 0 0;
-    margin-left: -25px;
-    text-shadow: 3px 3px 6px #000000;
 }
 
 
@@ -198,8 +194,9 @@ body {
 
 .textSecundario .centro-1 {
     display: inline-block;
-    color: #0600ff;
+    color: #eaff00;
     font-size: 40px;
+    font-weight: 700;
     text-align:center;
     padding: 50px 0 0 0;
     text-shadow: 3px 3px 6px #000000;
@@ -234,16 +231,17 @@ body {
     width: 95%;
     height:50%; 
     margin: 0 16px;
-    background-color: #0600ff;
+    background-color: #eaff00;
     border-radius: 10px;
-    font-size: 17px;
-    font-weight: 600;
-    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
     border: 2px solid #000000;
 }
 
 .textSecundario button:hover{
     background-color: #000000;
+    color: #ffffff;
+    transition: all 0.3s ease;
 }
 
 .textSecundario img {
@@ -258,19 +256,73 @@ body {
 
 
 .footer {
-    width: 100%;
-    background-color: #000000;
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: top;
     text-align: center;
+    width: 100%;
     height: 200px auto;
     margin-top: 20px;
-    padding: 20px;
+    padding: 30px;
+    background-color: #000000;
+}
+
+.info h1{
+    color: #fff700;
+    font-weight: 700;
+}
+
+.info p{
+    color: #ffffff;
+    font-weight: 900;
 }
 
 
-@media screen and (max-width: 1000px) {
+.redesSociales h1{
+    color: #fff700;
+    font-weight: 700;
+}
+
+.redesSociales p{
+    color: #ffffff;
+    font-weight: 900;
+    padding: 10px;
+}
+
+.redesSociales svg{
+    color: #ffffff;
+    width: 10%;
+    height: 20%;
+    margin: 15px 10px;
+} 
+
+.redesSociales .whtp:hover{
+    color: #43892b;
+}
+
+
+.redesSociales .face:hover{
+    color: #09099a;
+}
+
+.redesSociales .inst:hover{
+    color: #8a1ba1;
+}
+
+.horarios h1{
+    color: #fff700;
+    font-weight: 700;
+}
+
+.horarios p{
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    font-weight: 900;
+}
+
+
+@media(max-width: 1000px) {
 
     .navbarPrincipal a:not(.menu-icon),
     .navbarPrincipal button:not(.menu-icon) {
@@ -279,7 +331,12 @@ body {
 
     .navbarPrincipal.show-menu a,
     .navbarPrincipal.show-menu button {
-        display: inline-block;
+        display: block;
+    }
+
+    .navbarPrincipal.show-menu button{
+        margin-left: -30px;
+        width: 200px;
     }
 
     .navbarPrincipal.show-menu {
@@ -287,17 +344,127 @@ body {
         align-items: center;
     }
 
-    .navbarPrincipal.show-menu {
-        width: 100%; /* Ajusta el ancho del menú desplegable */
-    }
-
     .navbarPrincipal a,
     .navbarPrincipal button {
-        width: 100%; /* Ajusta el ancho de los enlaces y botones en el menú desplegable */
+        width: auto; 
+    }
+
+    .textPrincipal {
+        display: flex;
+        flex-direction: column;
+        text-align: justify;
+        justify-content: center;
+        margin-bottom: 40px;
+        margin-top: -55px;
+    }
+    
+    .textPrincipal .centro {
+        color: #eaff00;
+        font-weight: 700;
+        font-size: 35px;
+        text-align: center;
+        padding: 50px 20PX 0 20px;
+        margin: 0 7px 0 1px; 
+        text-shadow: 3px 3px 6px #000000;
+    
+    }
+       
+    .textPrincipal p {
+        margin: 2%;
+        padding: 10px;
+    }
+    
+    
+    .textPrincipal img {
+        padding: 20px;
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+    }
+    
+    .textSecundario {
+        display: flex;
+        flex-direction: column;
+        text-align: justify;
+        justify-content: center;
+        margin-bottom: 40px;
+        margin-top: -55px;
+    }
+    
+    .textSecundario .centro {
+        color: #eaff00;
+        font-weight: 700;
+        font-size: 35px;
+        text-align: center;
+        padding: 50px 20PX 0 20px;
+        margin: 0 7px 0 1px; 
+        text-shadow: 3px 3px 6px #000000;
+    
+    }
+       
+    .textSecundario p {
+        margin: 2%;
+        padding: 10px;
+    }
+    
+    
+    .textSecundario img {
+        padding: 20px;
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+    }
+
+    .textSecundario button{
+        width: 94.7%;
+        height:5%; 
+        margin: 0 16px;
+        padding: 5px;
+        background-color: #eaff00;
+        border-radius: 10px;
+        font-size: 18px;
+        font-weight: 600;
+        border: 2px solid #000000;
+    }   
+
+}
+
+@media(max-width: 800px){
+    .footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: top;
+        text-align: center;
+        width: 100%;
+        height: 200px auto;
+        margin-top: 20px;
+        padding: 30px;
+        background-color: #000000;
+    }
+
+    .info {
+        margin-bottom: 45px;
+    }
+
+    .redesSociales{
+        margin-bottom: 45px;
+    }
+
+    .redesSociales svg{
+        color: #ffffff;
+        width: 10%;
+        height: 15%;
+        margin: 15px 10px;
+    } 
+
+    .horarios p{
+        margin-bottom: 30px;
+        padding-bottom: 10px;
     }
 }
 
-@media screen and (min-width: 1001px) {
+@media (min-width: 1001px) {
     .navbarPrincipal .menu-icon {
         display: none;
     }
