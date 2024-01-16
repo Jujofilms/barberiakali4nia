@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                       WHERE id = '$id'";
     
     if ($conexion->query($sqlActualizar) === TRUE) {
-        echo '<script>alert("Datos actualizados exitosamente"); window.location = "../../usuarios.php";</script>';
+        echo '<script>alert("Datos actualizados exitosamente, te redirigimos a tu panel"); window.location = "../../usuarios.php";</script>';
         exit();
     } else {
         echo '<script>alert("Error al actualizar datos ' . $conexion->error . '"); window.location = "movimientos.php";</script>';
