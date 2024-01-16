@@ -97,9 +97,7 @@
                 <label for="correo">Correo Electrónico:</label>
                 <input type="email" placeholder="Correo Electrónico" name="correo" id="correo" required>
                 <label for="contrasena">Contraseña</label>
-                <input type="password" placeholder="Contraseña" name="contrasena" id="contrasena" required>
-                <label for="imagen">Imagen:</label>
-                <input type="file" name="imagen" id="imagen" required>
+                <input type="password" placeholder="Contraseña" name="contrasena" id="contrasena" required> 
                 <div class="barbero-check">
                     <label>CARGO:</label>
                     <label for="barbero">BARBERO</label>
