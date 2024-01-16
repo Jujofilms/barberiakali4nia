@@ -1,0 +1,165 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('../../../../img/fondo-2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Esto asegura que la imagen de fondo permanezca fija al hacer scroll */
+    backdrop-filter: blur(10px);
+    overflow-y: scroll; /* Agregado para permitir desplazamiento vertical en dispositivos móviles */
+}
+
+.navbar {
+    background-color: black;
+    overflow: hidden;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.navbar .menu-icon:hover{
+    color: green;
+}
+
+.navbar .menu-icon{
+    font-size: 25px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    cursor: pointer;
+}
+
+.navbar a {
+    color: #f2f2f2;
+    text-decoration: none;
+    padding: 14px 16px;
+    text-align: center;
+    display: block;
+}
+
+.navbar a:hover {
+    background-color: green;
+    border-radius: 10px;
+    color: white;
+}
+
+.logout-button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12% 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.logout-button:hover {
+    background-color: #d32f2f;
+}
+
+.navbar .menu-icon {
+    color: white;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+.user-info {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    margin-top: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+img {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.user-role {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.edit-button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.user-info a{
+    text-decoration: none;
+}
+
+.edit-button:hover {
+    background-color: yellow;
+    color: black;
+}
+
+/* Estilos responsivos */
+@media screen and (max-width: 800px) {
+    .navbar a:not(.menu-icon) {
+        display: none;
+    }
+
+    .navbar.show-menu a {
+        display: block;
+    }
+
+    .btn-agregar-usuarios button {
+        width: 100%; /* Hacer el botón ocupar el 100% del ancho en dispositivos móviles */
+    }
+
+    .navbar{
+        display: fixed;
+    }
+
+    .navbar .menu-icon{
+        justify-content: left;
+    }
+
+    .navbar.show-menu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar.show-menu .logout-button {
+        width: auto;
+        /* Mantener el ancho original en dispositivos móviles */
+    }
+
+    .navbar a {
+        width: auto;
+    }
+
+    img{
+        width: 200px;
+        height: 200px;
+    }
+}
+
+/* Ocultar el icono de menú en pantallas más grandes (PC) */
+@media screen and (min-width: 801px) {
+    .navbar .menu-icon {
+        display: none;
+    }
+
+    .navbar{
+        display: flex;
+    }
+}

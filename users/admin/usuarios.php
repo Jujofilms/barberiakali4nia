@@ -99,7 +99,7 @@ $result = mysqli_query($conexion, $query);
         <a href="#agenda-completa">Agenda Completa</a>
         <a href="#mi-agenda">Mi Agenda</a>
         <a href="#caja">Caja</a>
-        <a href="#configuracion">Configuración</a>
+        <a href="mi_cuenta.php">Mi Cuenta</a>
         <a href="../../php/cerrar_sesion.php" class="logout-button">Cerrar Sesión</a>
     </div>
 
