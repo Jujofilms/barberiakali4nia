@@ -98,8 +98,7 @@ body {
     color: #000000;
 }
 
-
-@media screen and (max-width: 800px) {
+@media(max-width: 1000px) {
 
     .navbarPrincipal a:not(.menu-icon),
     .navbarPrincipal button:not(.menu-icon) {
@@ -108,7 +107,12 @@ body {
 
     .navbarPrincipal.show-menu a,
     .navbarPrincipal.show-menu button {
-        display: inline-block;
+        display: block;
+    }
+
+    .navbarPrincipal.show-menu button{
+        margin-left: -30px;
+        width: 200px;
     }
 
     .navbarPrincipal.show-menu {
@@ -116,20 +120,127 @@ body {
         align-items: center;
     }
 
-    .navbarPrincipal.show-menu {
-        width: auto;
-    }
-
     .navbarPrincipal a,
     .navbarPrincipal button {
-        width: auto;
+        width: auto; 
     }
 
+    .textPrincipal {
+        display: flex;
+        flex-direction: column;
+        text-align: justify;
+        justify-content: center;
+        margin-bottom: 40px;
+        margin-top: -55px;
+    }
     
+    .textPrincipal .centro {
+        color: #eaff00;
+        font-weight: 700;
+        font-size: 35px;
+        text-align: center;
+        padding: 50px 20PX 0 20px;
+        margin: 0 7px 0 1px; 
+        text-shadow: 3px 3px 6px #000000;
+    
+    }
+       
+    .textPrincipal p {
+        margin: 2%;
+        padding: 10px;
+    }
+    
+    
+    .textPrincipal img {
+        padding: 20px;
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+    }
+    
+    .textSecundario {
+        display: flex;
+        flex-direction: column;
+        text-align: justify;
+        justify-content: center;
+        margin-bottom: 40px;
+        margin-top: -55px;
+    }
+    
+    .textSecundario .centro {
+        color: #eaff00;
+        font-weight: 700;
+        font-size: 35px;
+        text-align: center;
+        padding: 50px 20PX 0 20px;
+        margin: 0 7px 0 1px; 
+        text-shadow: 3px 3px 6px #000000;
+    
+    }
+       
+    .textSecundario p {
+        margin: 2%;
+        padding: 10px;
+    }
+    
+    
+    .textSecundario img {
+        padding: 20px;
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+    }
+
+    .textSecundario button{
+        width: 94.7%;
+        height:5%; 
+        margin: 0 16px;
+        padding: 5px;
+        background-color: #eaff00;
+        border-radius: 10px;
+        font-size: 18px;
+        font-weight: 600;
+        border: 2px solid #000000;
+    }   
+
 }
 
+@media(max-width: 800px){
+    .footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: top;
+        text-align: center;
+        width: 100%;
+        height: 200px auto;
+        margin-top: 20px;
+        padding: 30px;
+        background-color: #000000;
+    }
 
-@media screen and (min-width: 801px) {
+    .info {
+        margin-bottom: 45px;
+    }
+
+    .redesSociales{
+        margin-bottom: 45px;
+    }
+
+    .redesSociales svg{
+        color: #ffffff;
+        width: 10%;
+        height: 15%;
+        margin: 15px 10px;
+    } 
+
+    .horarios p{
+        margin-bottom: 30px;
+        padding-bottom: 10px;
+    }
+}
+
+@media (min-width: 1001px) {
     .navbarPrincipal .menu-icon {
         display: none;
     }

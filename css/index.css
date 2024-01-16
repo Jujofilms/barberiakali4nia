@@ -277,6 +277,13 @@ body {
     font-weight: 900;
 }
 
+.info svg{
+    color: #ffffff;
+    font-weight: 900;
+    width: 8%;
+    height: 6%;
+    margin: 8px;
+}
 
 .redesSociales h1{
     color: #fff700;
@@ -332,6 +339,11 @@ body {
     .navbarPrincipal.show-menu a,
     .navbarPrincipal.show-menu button {
         display: block;
+    }
+
+    .navbarPrincipal.show-menu a{
+        margin-left: -30px;
+        width: 200px;
     }
 
     .navbarPrincipal.show-menu button{
