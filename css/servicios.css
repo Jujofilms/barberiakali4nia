@@ -309,7 +309,7 @@ body {
         font-size: 40px;
         font-weight: 900;
         font-family: 'Open Sans', sans-serif;
-        margin-bottom: 60px;
+        margin-bottom: 30px;
         margin-left: -25px;
         color: #eaff00;
         text-shadow: 3px 3px 6px #000000;
@@ -369,7 +369,7 @@ body {
         font-size: 40px;
         font-weight: 900;
         font-family: 'Open Sans', sans-serif;
-        margin-bottom: 60px;
+        margin-bottom: 30px;
         margin-left: 22px;
         color: #eaff00;
         text-shadow: 3px 3px 6px #000000;
@@ -382,6 +382,7 @@ body {
         grid-template-columns: 240px  240px 240px; 
         grid-template-rows: auto;
         gap: 1px;
+        margin-bottom:40px;
     }
 
     .text-1,
@@ -422,7 +423,7 @@ body {
     }
 }
 
-@media(max-width: 814px) {
+@media(max-width: 821px) {
 
     .navbarPrincipal a:not(.menu-icon),
     .navbarPrincipal button:not(.menu-icon) {
@@ -431,27 +432,28 @@ body {
 
     .navbarPrincipal.show-menu a,
     .navbarPrincipal.show-menu button {
-        display: inline-block;
+        display: block;
     }
 
-    .navbarPrincipal.show-menu button {
-        margin-left: -30px;
+    .navbarPrincipal.show-menu button{
+        margin-left: -32px;
         width: 200px;
     }
 
     .navbarPrincipal.show-menu {
         flex-direction: column;
         align-items: center;
+
     }
 
     .navbarPrincipal a,
     .navbarPrincipal button {
-        width: auto;
+        width: auto; 
     }
 
     .main .service {
         text-align: center;
-        font-size: 35px;
+        font-size: 30px;
         font-weight: 900;
         font-family: 'Open Sans', sans-serif;
         margin-bottom: 70px;
@@ -489,9 +491,8 @@ body {
 
     .text-1 img {
         padding: 20px;
-        width: 100%;
-        height: 100%;
         border-radius: 30px;
+        height: 5%;
     }
     
 }
@@ -514,14 +515,21 @@ body {
         margin-bottom: 45px;
     }
 
+    .info svg {
+        color: #ffffff; 
+        width: 4%;
+        height: 5%;
+        margin: 15px 10px;
+    }
+
     .redesSociales {
         margin-bottom: 45px;
     }
 
     .redesSociales svg {
         color: #ffffff; 
-        width: 10%;
-        height: 15%;
+        width: 5%;
+        height: 5%;
         margin: 15px 10px;
     }
 
@@ -531,7 +539,7 @@ body {
     }
 }
 
-@media (min-width: 815px) {
+@media (min-width: 822px) {
     .navbarPrincipal .menu-icon {
         display: none;
     }
