@@ -16,7 +16,7 @@
         <nav class="navbarPrincipal">
             <img src="../img/logo.png" alt="logo" class="img-logo">
             <ul>
-                <li><a href="">Inicio</a></li>
+                <li><a href="../index.php">Inicio</a></li>
                 <li><a href="">Servicios</a></li>
                 <li><a href="">Contacto</a></li>
             </ul>
@@ -49,5 +49,5 @@
     <body>
 
     </body>
-    <script src="index.js"></script>
+    <script src="servicios.js"></script>
 </html>
