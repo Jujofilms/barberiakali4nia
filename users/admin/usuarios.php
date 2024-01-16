@@ -94,7 +94,7 @@ $result = mysqli_query($conexion, $query);
     <div class="navbar">
         <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
         <a href="index.php">Panel</a>
-        <a href="#servicios">Servicios</a>
+        <a href="servicios.php">Servicios</a>
         <a href="usuarios.php">Usuarios</a>
         <a href="#agenda-completa">Agenda Completa</a>
         <a href="#mi-agenda">Mi Agenda</a>

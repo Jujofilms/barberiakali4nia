@@ -1,3 +1,12 @@
+<?php
+require '../config/items_db.php';
+$db = new Database();
+$con = $db->conectar();
+
+$sql = $con->prepare("SELECT id, nombre, descripcion, imagen FROM servicios WHERE id>=1");
+$sql->execute();
+$resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -54,6 +63,7 @@
             <!-- Información -->
             <h1 class="service">NUESTROS SERVICIOS</h1>
             <section class="container">
+<<<<<<< HEAD
                 <div class="text-1">
                     <img src="../img/text-principal.jpg" alt="text-1">
                     <h1 class="centro">Corte de pelo</h1>
@@ -88,6 +98,21 @@
                         ipsum quae est.
                     </p>
                 </div>
+=======
+                <?php foreach ($resultado as $row) {
+                    $imagenBase64 = base64_encode($row['imagen']);
+                    ?>
+                    <div class="text-1">
+                        <img src="data:image/jpeg;base64,<?php echo $imagenBase64; ?>" alt="text-1">
+                        <h1 class="centro">
+                            <?php echo $row['nombre']; ?>
+                        </h1>
+                        <p>
+                            <?php echo $row['descripcion']; ?>
+                        </p>
+                    </div>
+                <?php } ?>
+>>>>>>> aebfa50c47d87d84064717b6da588787b1d26cde
             </section>
         </main>
 
@@ -153,5 +178,9 @@
             <p>&copy; 2024 Barbería Kali4nia</p>
         </footer>
     </body>
+<<<<<<< HEAD
     <script src="../servicios.js"></script>
 </html>
+=======
+
+>>>>>>> aebfa50c47d87d84064717b6da588787b1d26cde

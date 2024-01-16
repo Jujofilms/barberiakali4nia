@@ -1,0 +1,231 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('../../../../img/fondo-2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Esto asegura que la imagen de fondo permanezca fija al hacer scroll */
+    backdrop-filter: blur(10px);
+}
+
+
+.navbar {
+    background-color: #000000;
+    overflow: hidden;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+}
+
+.navbar .menu-icon:hover{
+    color: green;
+}
+
+.navbar .menu-icon{
+    font-size: 25px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    cursor: pointer;
+}
+
+.navbar a {
+    color: #f2f2f2;
+    text-decoration: none;
+    padding: 14px 16px;
+    text-align: center;
+    display: block;
+}
+
+.navbar a:hover {
+    background-color: green;
+    border-radius: 10px;
+    color: white;
+}
+
+.logout-button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12% 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.logout-button:hover {
+    background-color: #d32f2f;
+}
+
+.navbar .menu-icon {
+    color: white;
+}
+
+.usuarios{
+    width: 100%;
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.usuarios button{
+    cursor: pointer;
+    color: black;
+    background-color: red;
+    border: 2%;
+    font-weight: 720;
+    border-color: black;
+    border-radius: 10px;
+    padding: 1.1% 1%;
+}
+
+.usuarios button:hover{
+    color: white;
+    border-color: white;
+    padding: 1.2% 1.1%;
+    background-color: #000000;
+}
+
+.tabla-usuarios {
+    margin: 10px;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 13px;
+    text-align: center;
+}
+
+th {
+    color: white;
+    background-color: rgb(0, 128, 255);
+}
+
+td { 
+    color: white;
+    background-color: transparent;
+}
+
+tbody tr:hover {
+    background-color: black;
+}
+
+.btn-editar{
+    cursor: pointer;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    background-color: rgb(255, 200, 0);
+    border: 2%;
+    border-color: black;
+    border-radius: 10px;
+    padding: 3% 3%;
+}
+
+.btn-editar:hover{
+    background-color: yellow;
+}
+
+.btn-eliminar{
+    cursor: pointer;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 0, 0);
+    border: 2%;
+    color: white;
+    border-color: black;
+    border-radius: 10px;
+    padding: 3% 3%;
+}
+
+.btn-eliminar:hover{
+    background-color: yellow;
+    color: black;
+}
+
+/* Estilos responsivos */
+@media screen and (max-width: 800px) {
+    .navbar a:not(.menu-icon) {
+        display: none;
+    }
+
+    .navbar.show-menu a {
+        display: block;
+    }
+
+    .navbar{
+        display: fixed;
+    }
+
+    .navbar.show-menu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar.show-menu .logout-button {
+        width: auto;
+        /* Mantener el ancho original en dispositivos móviles */
+    }
+
+    .navbar a {
+        width: auto;
+    }
+
+    table {
+        border: 0;
+    }
+
+    table thead {
+        display: none;
+    }
+
+    table, table tbody, table tr, table td {
+        display: block;
+        width: 100%;
+    }
+
+    table td {
+        margin-top: 30px;
+        text-align: right;
+        padding-left: 50%;
+        text-align: left;
+    }
+
+    table td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        display: inline-block;
+        width: 50%;
+        margin-left: -50%;
+    }
+
+    tbody tr:hover {
+        background-color: transparent;
+    }
+}
+
+/* Ocultar el icono de menú en pantallas más grandes (PC) */
+@media screen and (min-width: 801px) {
+    .navbar .menu-icon {
+        display: none;
+    }
+
+    .navbar{
+        display: flex;
+    }
+}

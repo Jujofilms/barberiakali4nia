@@ -10,7 +10,7 @@ class Database{
     // private $charset = "utf8";
 
     private $hostname = "localhost";
-    private $database = "barberc";
+    private $database = "barberc_db";
     private $username = "root";
     private $password = "";
     private $charset = "utf8";
