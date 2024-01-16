@@ -14,10 +14,12 @@
             background-image: url("../../../../img/fondo.jpg");
             background-size: cover;
             background-position: center;
+            background-attachment: fixed;
             display: flex;
             align-items: center;
             justify-content: center;
             height: 100vh;
+            overflow-y: auto; /* Agregado para permitir scroll vertical */
         }
 
         .fomurlario_usuario {
@@ -78,10 +80,13 @@
 
         .boton-cancelar {
             background-color: #d9534f;
-            font
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
         }
 
-        .boton-cacelar:hover {
+        .boton-cancelar:hover {
             background-color: yellow;
             color: white;
         }
@@ -91,13 +96,15 @@
 <body>
     <div class="fomurlario_usuario">
         <div class="formulario">
-            <form action="usuarios_be.php" method="post">
+            <form action="usuarios_be.php" method="post" enctype="multipart/form-data">
                 <label for="nombre">Nombre:</label>
                 <input type="text" placeholder="Nombre" name="nombre" id="nombre" required>
                 <label for="correo">Correo Electrónico:</label>
                 <input type="email" placeholder="Correo Electrónico" name="correo" id="correo" required>
                 <label for="contrasena">Contraseña</label>
-                <input type="password" placeholder="Contraseña" name="contrasena" id="contrasena" required> 
+                <input type="password" placeholder="Contraseña" name="contrasena" id="contrasena" required>
+                <label for="imagen">Subir Imagen:</label>
+                <input type="file" name="imagen" id="imagen" accept="image/*">
                 <div class="barbero-check">
                     <label>CARGO:</label>
                     <label for="barbero">BARBERO</label>

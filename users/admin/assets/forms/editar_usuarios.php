@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="../../imagenes/logo.png"/>
+    <link rel="icon" type="image/x-icon" href="../../imagenes/logo.png" />
     <title>KALI4NIA</title>
     <style>
         body {
@@ -15,12 +16,9 @@
             background-position: center;
             background-repeat: no-repeat;
             background-attachment: fixed;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
             color: white;
             backdrop-filter: blur(2px);
+            overflow-y: scroll; /* Agregado para permitir desplazamiento vertical en dispositivos móviles */
         }
 
         form {
@@ -34,8 +32,9 @@
         }
 
         input[type="text"],
+        input[type="file"],
         input[type="submit"] {
-            width: calc(100% - 22px); /* Ajuste para que los inputs tengan el mismo ancho que los botones */
+            width: calc(100% - 22px);
             padding: 10px;
             margin-bottom: 15px;
             border: 1px solid #ccc;
@@ -49,7 +48,7 @@
             background-color: green;
             color: white;
             cursor: pointer;
-            margin-bottom: 0; /* Ajuste para eliminar el espacio entre los botones */
+            margin-bottom: 0;
         }
 
         input[type="submit"]:hover {
@@ -64,8 +63,17 @@
         input[type="submit"]:nth-child(2):hover {
             background-color: yellow;
         }
+
+        img {
+            border-radius: 50%;
+            width: 400px;
+            height: 400px;
+            margin-bottom: 15px;
+            display: block;
+        }
     </style>
 </head>
+
 <body>
     <?php
     session_start();
@@ -87,13 +95,13 @@
     $id = $_GET['id'];
 
     // Consulta para obtener los datos del usuario a editar
-    $sqlUsuario = "SELECT id, nombre, correo, contrasena, barbero, administrador, bloqueo FROM barbero WHERE id = '$id'";
+    $sqlUsuario = "SELECT id, nombre, correo, contrasena, barbero, administrador, bloqueo, imagen FROM barbero WHERE id = '$id'";
     $resultadoUsuario = $conexion->query($sqlUsuario);
     $usuario = $resultadoUsuario->fetch_assoc();
     ?>
 
     <!-- Formulario para editar los datos del usuario -->
-    <form action="actualizar_usuario.php" method="POST">
+    <form action="actualizar_usuario.php" method="POST" enctype="multipart/form-data">
         <input type="hidden" name="correo" value="<?php echo $usuario['correo']; ?>">
         Nombre: <input type="text" name="nombre" value="<?php echo $usuario['nombre']; ?>"><br>
         Correo: <input type="text" name="correo" value="<?php echo $usuario['correo']; ?>"><br>
@@ -101,10 +109,18 @@
         Administrador: <input type="text" name="administrador" value="<?php echo $usuario['administrador']; ?>"><br>
         Bloqueo: <input type="text" name="bloqueo" value="<?php echo $usuario['bloqueo']; ?>"><br>
         ID: <input type="text" name="id" value="<?php echo $usuario['id']; ?>" readonly><br>
+        <?php
+        // Mostrar la imagen actual si existe
+        if (!empty($usuario['imagen'])) {
+            echo '<img src="data:image/jpeg;base64,' . base64_encode($usuario['imagen']) . '" alt="Imagen actual">';
+        }
+        ?>
+        Imagen: <input type="file" name="imagen"><br>
         <br>
         <!-- Agrega los campos restantes para editar -->
         <input type="submit" value="ACTUALIZAR">
         <input type="submit" value="CANCELAR" style="background-color: #d32f2f;" onclick="location.href='../../usuarios.php'; return false;">
     </form>
 </body>
+
 </html>
