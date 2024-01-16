@@ -94,5 +94,5 @@ if(mysqli_num_rows($validacion_recuperacion) > 0){
         }
     }
 } else {
-    echo '<script> alert("No encontramos ninguna cuenta registrada con ' . $correo . '"); window.location.href = "registro.php"; </script>';
+    echo '<script> alert("No encontramos ninguna cuenta registrada con ' . $correo . '"); window.location.href = "login.php"; </script>';
 }

@@ -23,9 +23,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $administrador = $_POST['administrador'];
     $bloqueo = $_POST['bloqueo'];
 
-    // Definir $stmt fuera del bloque condicional
-    $stmt = null;
-
     // Manejar la imagen
     if ($_FILES['imagen']['error'] == 0) {
         $imagenTmp = $_FILES['imagen']['tmp_name'];
@@ -33,45 +30,39 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Actualizar la base de datos con los datos del formulario y la nueva imagen
         $sqlActualizar = "UPDATE barbero 
-                          SET nombre = ?, 
-                              correo = ?, 
-                              barbero = ?, 
-                              administrador = ?, 
-                              bloqueo = ?, 
+                          SET nombre = '$nombre', 
+                              correo = '$correo', 
+                              barbero = '$barbero', 
+                              administrador = '$administrador', 
+                              bloqueo = '$bloqueo', 
                               imagen = ? 
-                          WHERE id = ?";
+                          WHERE id = '$id'";
 
         $stmt = $conexion->prepare($sqlActualizar);
-        $stmt->bind_param('sssssis', $nombre, $correo, $barbero, $administrador, $bloqueo, $imagenData, $id);
+        $stmt->bind_param('s', $imagenData);
         $stmt->execute();
     } else {
         // Actualizar la base de datos con los datos del formulario sin cambiar la imagen
         $sqlActualizar = "UPDATE barbero 
-                          SET nombre = ?, 
-                              correo = ?, 
-                              barbero = ?, 
-                              administrador = ?, 
-                              bloqueo = ? 
-                          WHERE id = ?";
+                          SET nombre = '$nombre', 
+                              correo = '$correo', 
+                              barbero = '$barbero', 
+                              administrador = '$administrador', 
+                              bloqueo = '$bloqueo' 
+                          WHERE id = '$id'";
 
-        $stmt = $conexion->prepare($sqlActualizar);
-        $stmt->bind_param('ssssii', $nombre, $correo, $barbero, $administrador, $bloqueo, $id);
-        $stmt->execute();
+        $conexion->query($sqlActualizar);
     }
 
-    if ($stmt && $stmt->affected_rows > 0) {
+    if ($stmt->affected_rows > 0) {
         echo '<script>alert("Datos actualizados exitosamente, te redirigimos a tu panel"); window.location = "../../usuarios.php";</script>';
         exit();
     } else {
-        echo '<script>alert("Error al actualizar datos ' . $conexion->error . '"); window.location = "../../usuarios.php";</script>';
+        echo '<script>alert("Error al actualizar datos ' . $conexion->error . '"); window.location = "movimientos.php";</script>';
         exit();
     }
 
-    // Cerrar $stmt solo si está definido
-    if ($stmt) {
-        $stmt->close();
-    }
-
+    $stmt->close();
     $conexion->close();
 }
 ?>
