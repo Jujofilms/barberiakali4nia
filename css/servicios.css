@@ -5,6 +5,11 @@ body {
     padding: 0;
     box-sizing: border-box;
     font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Establecer el mínimo alto del cuerpo como 100% de la ventana gráfica */
+    margin: 0; /* Eliminar el margen predeterminado del cuerpo */
 }
 
 .navbarPrincipal {
@@ -14,6 +19,7 @@ body {
     justify-content: space-around;
     align-items: center;
     transition: all 800ms ease;
+    margin: auto;
 }
 
 .navbarPrincipal .img-logo {
@@ -98,6 +104,139 @@ body {
     color: #000000;
 }
 
+.img-fondo {
+    width: 100%;
+    height: 600px;
+    margin-bottom: 50px;
+
+}
+
+.main {
+    margin: 0;
+    width: 100%;
+    height: 600px;
+    flex: 1;
+}
+
+.container {
+    font-family: 'Manjari', sans-serif;
+    font-weight: 700;
+    display: grid;
+    grid-template-columns: 400px 400px 400px;
+    gap: 20px;
+}
+
+.text-1,
+.text-2,
+.text-3 {
+    padding: 20px;
+    border-radius: 10px;
+    text-align: justify;
+}
+
+.text-1 .centro,
+.text-2 .centro,
+.text-3 .centro {
+    color: #000000;
+    font-weight: 600;
+    font-size: 30px;
+    text-align: center;
+    padding: 50px 0 0 0;
+    margin-left: -25px;
+    margin-top: -45px;
+}
+
+.text-1 p,
+.text-2 p,
+.text-3 p {
+    margin: 2%;
+    padding: 10px;
+    
+}
+
+.text-1 img,
+.text-2 img,
+.text-3 img {
+    padding: 10px;
+    width: 100%;
+    height: 50%;
+    border-radius: 20px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: top;
+    text-align: center;
+    width: 100%;
+    height: 200px auto;
+    margin-top: 20px;
+    padding: 30px;
+    background-color: #000000;
+}
+
+.info h1{
+    color: #fff700;
+    font-weight: 700;
+}
+
+.info p{
+    color: #ffffff;
+    font-weight: 900;
+}
+
+.info svg{
+    color: #ffffff;
+    font-weight: 900;
+    width: 8%;
+    height: 6%;
+    margin: 8px;
+}
+
+.redesSociales h1{
+    color: #fff700;
+    font-weight: 700;
+}
+
+.redesSociales p{
+    color: #ffffff;
+    font-weight: 900;
+    padding: 10px;
+}
+
+.redesSociales svg{
+    color: #ffffff;
+    width: 10%;
+    height: 20%;
+    margin: 15px 10px;
+} 
+
+.redesSociales .whtp:hover{
+    color: #43892b;
+}
+
+
+.redesSociales .face:hover{
+    color: #09099a;
+}
+
+.redesSociales .inst:hover{
+    color: #8a1ba1;
+}
+
+.horarios h1{
+    color: #fff700;
+    font-weight: 700;
+}
+
+.horarios p{
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    font-weight: 900;
+}
+
+
 @media(max-width: 1000px) {
 
     .navbarPrincipal a:not(.menu-icon),
@@ -108,6 +247,11 @@ body {
     .navbarPrincipal.show-menu a,
     .navbarPrincipal.show-menu button {
         display: block;
+    }
+
+    .navbarPrincipal.show-menu a{
+        margin-left: -30px;
+        width: 200px;
     }
 
     .navbarPrincipal.show-menu button{
@@ -157,51 +301,6 @@ body {
         height: 100%;
         border-radius: 30px;
     }
-    
-    .textSecundario {
-        display: flex;
-        flex-direction: column;
-        text-align: justify;
-        justify-content: center;
-        margin-bottom: 40px;
-        margin-top: -55px;
-    }
-    
-    .textSecundario .centro {
-        color: #eaff00;
-        font-weight: 700;
-        font-size: 35px;
-        text-align: center;
-        padding: 50px 20PX 0 20px;
-        margin: 0 7px 0 1px; 
-        text-shadow: 3px 3px 6px #000000;
-    
-    }
-       
-    .textSecundario p {
-        margin: 2%;
-        padding: 10px;
-    }
-    
-    
-    .textSecundario img {
-        padding: 20px;
-        width: 100%;
-        height: 100%;
-        border-radius: 30px;
-    }
-
-    .textSecundario button{
-        width: 94.7%;
-        height:5%; 
-        margin: 0 16px;
-        padding: 5px;
-        background-color: #eaff00;
-        border-radius: 10px;
-        font-size: 18px;
-        font-weight: 600;
-        border: 2px solid #000000;
-    }   
 
 }
 
