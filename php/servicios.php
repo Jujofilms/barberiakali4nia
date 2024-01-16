@@ -1,3 +1,12 @@
+<?php
+require '../config/items_db.php';
+$db = new Database();
+$con = $db->conectar();
+
+$sql = $con->prepare("SELECT id, nombre, descripcion, imagen FROM servicios WHERE id>=1");
+$sql->execute();
+$resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -51,40 +60,19 @@
         <main class="main">
             <!-- Información -->
             <section class="container">
-                <div class="text-1">
-                    <img src="../img/text-principal.jpg" alt="text-1">
-                    <h1 class="centro">¿Quiénes Somos?</h1>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, laborum quam quasi odit nihil
-                        aut
-                        architecto? Unde nesciunt voluptatem, eaque aliquam maxime numquam vel, quis voluptate
-                        cupiditate
-                        ipsum quae est.
-                    </p>
-                </div>
-                <div class="text-2">
-                    <img src="../img/text-2.jpg" alt="text-2">
-                    <h1 class="centro">¿Quiénes Somos?</h1>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, laborum quam quasi odit nihil
-                        aut
-                        architecto? Unde nesciunt voluptatem, eaque aliquam maxime numquam vel, quis voluptate
-                        cupiditate
-                        ipsum quae est.
-                    </p>
-    
-                </div>
-                <div class="text-3">
-                <img src="../img/fondo.jpg" alt="text-3">
-                    <h1 class="centro">¿Quiénes Somos?</h1>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, laborum quam quasi odit nihil
-                        aut
-                        architecto? Unde nesciunt voluptatem, eaque aliquam maxime numquam vel, quis voluptate
-                        cupiditate
-                        ipsum quae est.
-                    </p>
-                </div>
+                <?php foreach ($resultado as $row) {
+                    $imagenBase64 = base64_encode($row['imagen']);
+                    ?>
+                    <div class="text-1">
+                        <img src="data:image/jpeg;base64,<?php echo $imagenBase64; ?>" alt="text-1">
+                        <h1 class="centro">
+                            <?php echo $row['nombre']; ?>
+                        </h1>
+                        <p>
+                            <?php echo $row['descripcion']; ?>
+                        </p>
+                    </div>
+                <?php } ?>
             </section>
         </main>
 
@@ -152,6 +140,7 @@
     </body>
     <script src="../js/servicios.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-rsAPa4LyYHctzabFAAOFaLqBqcNoV6RcA0U2rXZy3PkOg6LMA7szThab4F5U4vm3" crossorigin="anonymous"></script>
+        integrity="sha384-rsAPa4LyYHctzabFAAOFaLqBqcNoV6RcA0U2rXZy3PkOg6LMA7szThab4F5U4vm3"
+        crossorigin="anonymous"></script>
 
 </html>
