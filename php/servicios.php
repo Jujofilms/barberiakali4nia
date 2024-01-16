@@ -9,9 +9,11 @@
     <link rel="stylesheet" href="../css/servicios.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-rsAPa4LyYHctzabFAAOFaLqBqcNoV6RcA0U2rXZy3PkOg6LMA7szThab4F5U4vm3" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
     <header class="header">
         <nav class="navbarPrincipal">
             <img src="../img/logo.png" alt="logo" class="img-logo">
@@ -47,13 +49,14 @@
     </header>
 
     <body>
-        <img src="../img/img-service.jpg" alt="fondo" class="img-fondo">
+        <img src="../img/img-servicio.jpg" alt="fondo" class="img-fondo">
         <main class="main">
             <!-- Información -->
+            <h1 class="service">NUESTROS SERVICIOS</h1>
             <section class="container">
                 <div class="text-1">
                     <img src="../img/text-principal.jpg" alt="text-1">
-                    <h1 class="centro">¿Quiénes Somos?</h1>
+                    <h1 class="centro">Corte de pelo</h1>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, laborum quam quasi odit nihil
                         aut
@@ -64,7 +67,7 @@
                 </div>
                 <div class="text-2">
                     <img src="../img/text-2.jpg" alt="text-2">
-                    <h1 class="centro">¿Quiénes Somos?</h1>
+                    <h1 class="centro">Barba</h1>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, laborum quam quasi odit nihil
                         aut
@@ -76,7 +79,7 @@
                 </div>
                 <div class="text-3">
                 <img src="../img/fondo.jpg" alt="text-3">
-                    <h1 class="centro">¿Quiénes Somos?</h1>
+                    <h1 class="centro">Cejas</h1>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, laborum quam quasi odit nihil
                         aut
@@ -150,8 +153,5 @@
             <p>&copy; 2024 Barbería Kali4nia</p>
         </footer>
     </body>
-    <script src="../js/servicios.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-rsAPa4LyYHctzabFAAOFaLqBqcNoV6RcA0U2rXZy3PkOg6LMA7szThab4F5U4vm3" crossorigin="anonymous"></script>
-
+    <script src="../servicios.js"></script>
 </html>
