@@ -29,9 +29,9 @@ $result = mysqli_query($conexion, $query);
     <link rel="stylesheet" href="assets/css/usuarios.css">
     <style>
         .imagen-usuario {
-            max-width: 100px;
+            width: 100px;
             /* Ajusta el tamaño máximo de la imagen */
-            max-height: 100px;
+            height: 100px;
             /* Ajusta el tamaño máximo de la imagen */
             cursor: pointer;
             /* Cambia el cursor al hacer clic en la imagen */
@@ -177,7 +177,7 @@ $result = mysqli_query($conexion, $query);
             navbar.classList.toggle('show-menu');
         }
         function editarUsuario(id) {
-            window.location.href = 'editar_usuario.php?id=' + id;
+            window.location.href = 'assets/forms/editar_usuarios.php?id=' + id;
         }
         function eliminarUsuario(id) {
             var confirmacion = confirm("¿Estás seguro de que deseas eliminar este usuario?");

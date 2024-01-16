@@ -5,7 +5,7 @@ body {
 }
 
 .navbar {
-    background-color: #000000;
+    background-color: black;
     overflow: hidden;
     justify-content: space-between;
     align-items: center;
@@ -61,6 +61,7 @@ body {
 
 /* Estilos para el botón de agregar usuarios */
 .btn-agregar-usuarios {
+    cursor: pointer;
     width: 100%;
     display: flex;
     justify-content: center;
