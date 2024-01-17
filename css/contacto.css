@@ -1,0 +1,546 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo&family=Manjari&family=Open+Sans&display=swap');
+
+body {
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.navbarPrincipal {
+    padding: 10px;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: all 800ms ease;
+    margin: auto;
+}
+
+.navbarPrincipal .img-logo {
+    width: 80px;
+}
+
+.navbarPrincipal .menu-icon {
+    color: #ffe100;
+    font-size: 35px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+.navbarPrincipal ul li {
+    padding: 5px 15px;
+    margin: 10px 0;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.navbarPrincipal ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 900;
+    font-size: 18px;
+}
+
+.navbarPrincipal ul li a:before,
+.navbarPrincipal ul li a:after {
+    content: "";
+    display: block;
+    margin: auto;
+    height: 3px;
+    width: 0px;
+    background: #ffe100;
+    transition: all 450ms ease;
+}
+
+.navbarPrincipal ul li a:hover:before,
+.navbarPrincipal ul li a:hover:after {
+    width: 100%;
+}
+
+.navbarPrincipal button {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 7px;
+    padding: 6px 11px 7px 10px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #ffffff;
+    background-color: #000000;
+    color: #ffffff;
+    transition: all 600ms ease;
+}
+
+.navbarPrincipal button:hover {
+    background-color: #ffe100;
+    color: #000000;
+}
+
+.navbarPrincipal button svg {
+    margin: 0 5px 0 2px;
+    font-size: 10px;
+}
+
+.navbarPrincipal button svg::before,
+.navbarPrincipal button svg::after {
+    color: #ffffff;
+}
+
+.navbarPrincipal button svg:hover::before,
+.navbarPrincipal button svg:hover::after {
+    color: #000000;
+}
+
+.img-fondo {
+    width: 100%;
+    height: 500px;
+    margin-bottom: 50px;
+    object-fit: cover;
+}
+
+.main .service {
+    text-align: center;
+    font-size: 60px;
+    font-weight: 900;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 60px;
+    margin-left: -26px;
+    color: #eaff00;
+    text-shadow: 3px 3px 6px #000000;
+}
+
+.container {
+    font-family: 'Arvo', serif;
+    font-weight: 700;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-bottom:50px;
+    gap: 20px;
+    
+}
+
+.container h2{
+    font-weight:900;
+    display:flex;
+    justify-content:center;
+    text-align:center;
+    grid-column: 0/3;
+    margin-bottom:20px;
+}
+
+.container h2 svg{
+    
+}
+
+.container form{
+    display:flex;
+    flex-direction:column;
+    margin:auto;
+}
+
+.container form input{
+    margin-bottom:20px;
+    width: 500px;
+    height: 40px;
+    outline:none;
+    border-radius: 2px;
+    border: 1px solid #b3c4d4;
+    padding: 5px 5px 5px 10px;
+}
+
+.container .map{
+    margin: auto;
+}
+
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: top;
+    text-align: center;
+    width: 100%;
+    height: 200px auto;
+    margin-top: 20px;
+    padding: 30px;
+    background-color: #000000;
+}
+
+.info h1 {
+    color: #fff700;
+    font-weight: 700;
+}
+
+.info p {
+    color: #ffffff;
+    font-weight: 900;
+}
+
+.info svg {
+    color: #ffffff;
+    font-weight: 900;
+    width: 8%;
+    height: 6%;
+    margin: 8px;
+}
+
+.redesSociales h1 {
+    color: #fff700;
+    font-weight: 700;
+}
+
+.redesSociales p {
+    color: #ffffff;
+    font-weight: 900;
+    padding: 10px;
+}
+
+.redesSociales svg {
+    color: #ffffff;
+    width: 10%;
+    height: 20%;
+    margin: 15px 10px;
+}
+
+.redesSociales .whtp:hover {
+    color: #43892b;
+}
+
+
+.redesSociales .face:hover {
+    color: #09099a;
+}
+
+.redesSociales .inst:hover {
+    color: #8a1ba1;
+}
+
+.horarios h1 {
+    color: #fff700;
+    font-weight: 700;
+}
+
+.horarios p {
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    font-weight: 900;
+}
+
+
+@media(max-width: 1400px) {
+    .main {
+        flex: 1;
+    }
+
+    .main .service {
+        text-align: center;
+        font-size: 50px;
+        font-weight: 900;
+        font-family: 'Open Sans', sans-serif;
+        margin-bottom: 60px;
+        margin-left: -26px;
+        color: #eaff00;
+        text-shadow: 3px 3px 6px #000000;
+    }
+
+    .container {
+        font-family: 'Arvo', serif;
+        font-weight: 700;
+        display: grid;
+        grid-template-columns: 350px  350px 350px; 
+        grid-template-rows: auto;
+        gap: 20px;
+    }
+
+    .text-1,
+    .text-2,
+    .text-3 {
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .text-1 .centro,
+    .text-2 .centro,
+    .text-3 .centro {
+        color: #000000;
+        font-size: 35px;
+        text-align: center;
+        padding: 50px 0 0 0;
+        margin-left: 15px;
+        margin-top: -45px;
+    }
+
+    .text-1 p,
+    .text-2 p,
+    .text-3 p {
+        margin: 2%;
+        padding: 10px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 100;
+    }
+
+    .text-1 img,
+    .text-2 img,
+    .text-3 img {
+        padding: 10px;
+        width: 100%;
+        height: 50%;
+        border-radius: 20px;
+    }
+}
+
+@media(max-width: 1199px) {
+
+    .main .service {
+        text-align: center;
+        font-size: 40px;
+        font-weight: 900;
+        font-family: 'Open Sans', sans-serif;
+        margin-bottom: 30px;
+        margin-left: -25px;
+        color: #eaff00;
+        text-shadow: 3px 3px 6px #000000;
+    }
+
+    .container {
+        font-family: 'Arvo', serif;
+        font-weight: 700;
+        display: grid;
+        grid-template-columns: 300px  300px 300px;
+        grid-template-rows: auto; 
+        gap: 25px;
+        margin-bottom: 13%;
+    }
+
+    .text-1,
+    .text-2,
+    .text-3 {
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .text-1 .centro,
+    .text-2 .centro,
+    .text-3 .centro {
+        color: #000000;
+        font-size: 35px;
+        text-align: center;
+        padding: 50px 0 0 0;
+        margin-left: 15px;
+        margin-top: -45px;
+    }
+
+    .text-1 p,
+    .text-2 p,
+    .text-3 p {
+        margin: 2%;
+        padding: 10px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 100;
+    }
+
+    .text-1 img,
+    .text-2 img,
+    .text-3 img {
+        padding: 10px;
+        width: 100%;
+        height: 50%;
+        border-radius: 20px;
+    }
+}
+
+@media(max-width: 992px) {
+
+    .main .service {
+        text-align: center;
+        font-size: 40px;
+        font-weight: 900;
+        font-family: 'Open Sans', sans-serif;
+        margin-bottom: 30px;
+        margin-left: 22px;
+        color: #eaff00;
+        text-shadow: 3px 3px 6px #000000;
+    }
+
+    .container {
+        font-family: 'Arvo', serif;
+        font-weight: 700;
+        display: grid;
+        grid-template-columns: 240px  240px 240px; 
+        grid-template-rows: auto;
+        gap: 1px;
+        margin-bottom:40px;
+    }
+
+    .text-1,
+    .text-2,
+    .text-3 {
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .text-1 .centro,
+    .text-2 .centro,
+    .text-3 .centro {
+        color: #000000;
+        font-size: 35px;
+        text-align: center;
+        padding: 50px 0 0 0;
+        margin-left: 15px;
+        margin-top: -45px;
+    }
+
+    .text-1 p,
+    .text-2 p,
+    .text-3 p {
+        margin: 2%;
+        padding: 10px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 100;
+    }
+
+    .text-1 img,
+    .text-2 img,
+    .text-3 img {
+        padding: 10px;
+        width: 100%;
+        height: 40%;
+        border-radius: 20px;
+    }
+}
+
+@media(max-width: 821px) {
+
+    .navbarPrincipal a:not(.menu-icon),
+    .navbarPrincipal button:not(.menu-icon) {
+        display: none;
+    }
+
+    .navbarPrincipal.show-menu a,
+    .navbarPrincipal.show-menu button {
+        display: block;
+    }
+
+    .navbarPrincipal.show-menu button{
+        margin-left: -32px;
+        width: 200px;
+    }
+
+    .navbarPrincipal.show-menu {
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .navbarPrincipal a,
+    .navbarPrincipal button {
+        width: auto; 
+    }
+
+    .main .service {
+        text-align: center;
+        font-size: 30px;
+        font-weight: 900;
+        font-family: 'Open Sans', sans-serif;
+        margin-bottom: 70px;
+        margin-left: -6px;
+        color: #eaff00;
+        text-shadow: 3px 3px 6px #000000;
+    }
+
+    .container {
+        font-family: 'Arvo', serif;
+        font-weight: 700;
+        display: flex;
+        flex-direction: column;
+        text-align: justify;
+        justify-content: center;
+    }
+
+
+    .text-1 {
+        margin-bottom: 40px;
+        margin-top: -55px;
+    }
+
+    .text-1 .centro {
+        font-weight: 700;
+        font-size: 35px;
+        text-align: center;    
+    }
+
+    .text-1 p {
+        margin: 2%;
+        padding: 10px;
+    }
+
+
+    .text-1 img {
+        padding: 20px;
+        border-radius: 30px;
+        height: 5%;
+    }
+    
+}
+
+@media(max-width: 900px) {
+    .footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: top;
+        text-align: center;
+        width: 100%;
+        height: 200px auto;
+        margin-top: 20px;
+        padding: 30px;
+        background-color: #000000;
+    }
+
+    .info {
+        margin-bottom: 45px;
+    }
+
+    .info svg {
+        color: #ffffff; 
+        width: 4%;
+        height: 5%;
+        margin: 15px 10px;
+    }
+
+    .redesSociales {
+        margin-bottom: 45px;
+    }
+
+    .redesSociales svg {
+        color: #ffffff; 
+        width: 5%;
+        height: 5%;
+        margin: 15px 10px;
+    }
+
+    .horarios p {
+        margin-bottom: 30px;
+        padding-bottom: 10px;
+    }
+}
+
+@media (min-width: 822px) {
+    .navbarPrincipal .menu-icon {
+        display: none;
+    }
+}   

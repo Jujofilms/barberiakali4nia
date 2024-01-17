@@ -319,9 +319,10 @@ body {
         font-family: 'Arvo', serif;
         font-weight: 700;
         display: grid;
-        grid-template-columns: 300px  300px 300px; 
-        grid-template-rows: auto;
-        gap: 15px;
+        grid-template-columns: 300px  300px 300px;
+        grid-template-rows: auto; 
+        gap: 25px;
+        margin-bottom: 13%;
     }
 
     .text-1,
