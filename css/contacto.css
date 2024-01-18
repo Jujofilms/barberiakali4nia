@@ -375,6 +375,7 @@ body {
         border-radius: 2px;
         border: 1px solid #000000;
         padding: 10px;
+        resize: none; /* Deshabilitar la redimension */
     }
     
     .container button{
