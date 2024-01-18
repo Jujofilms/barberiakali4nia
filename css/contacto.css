@@ -166,19 +166,19 @@ body {
 
 .container input{
     margin-bottom:20px;
-    width: 500px;
     height: 40px;
-    outline:none;
     border-radius: 2px;
     border: 1px solid #000000;
     padding: 5px 5px 5px 10px;
 }
 
-.container textarea{
+
+.container textarea {
     height: 266px;
     margin-bottom: 20px;
     border-radius: 2px;
     border: 1px solid #000000;
+    padding: 10px;
 }
 
 .container button{
@@ -266,191 +266,10 @@ body {
     font-weight: 900;
 }
 
-
-@media(max-width: 1400px) {
-    .main {
-        flex: 1;
-    }
-
-    .main .service {
-        text-align: center;
-        font-size: 50px;
-        font-weight: 900;
-        font-family: 'Open Sans', sans-serif;
-        margin-bottom: 60px;
-        margin-left: -26px;
-        color: #eaff00;
-        text-shadow: 3px 3px 6px #000000;
-    }
-
-    .container {
-        font-family: 'Arvo', serif;
-        font-weight: 700;
-        display: grid;
-        grid-template-columns: 350px  350px 350px; 
-        grid-template-rows: auto;
-        gap: 20px;
-    }
-
-    .text-1,
-    .text-2,
-    .text-3 {
-        padding: 20px;
-        border-radius: 10px;
-        text-align: center;
-    }
-
-    .text-1 .centro,
-    .text-2 .centro,
-    .text-3 .centro {
-        color: #000000;
-        font-size: 35px;
-        text-align: center;
-        padding: 50px 0 0 0;
-        margin-left: 15px;
-        margin-top: -45px;
-    }
-
-    .text-1 p,
-    .text-2 p,
-    .text-3 p {
-        margin: 2%;
-        padding: 10px;
-        font-family: 'Open Sans', sans-serif;
-        font-weight: 100;
-    }
-
-    .text-1 img,
-    .text-2 img,
-    .text-3 img {
-        padding: 10px;
-        width: 100%;
-        height: 50%;
-        border-radius: 20px;
-    }
+@madia(max-width: 1400px){
+    
 }
 
-@media(max-width: 1199px) {
-
-    .main .service {
-        text-align: center;
-        font-size: 40px;
-        font-weight: 900;
-        font-family: 'Open Sans', sans-serif;
-        margin-bottom: 30px;
-        margin-left: -25px;
-        color: #eaff00;
-        text-shadow: 3px 3px 6px #000000;
-    }
-
-    .container {
-        font-family: 'Arvo', serif;
-        font-weight: 700;
-        display: grid;
-        grid-template-columns: 300px  300px 300px;
-        grid-template-rows: auto; 
-        gap: 25px;
-        margin-bottom: 13%;
-    }
-
-    .text-1,
-    .text-2,
-    .text-3 {
-        padding: 20px;
-        border-radius: 10px;
-        text-align: center;
-    }
-
-    .text-1 .centro,
-    .text-2 .centro,
-    .text-3 .centro {
-        color: #000000;
-        font-size: 35px;
-        text-align: center;
-        padding: 50px 0 0 0;
-        margin-left: 15px;
-        margin-top: -45px;
-    }
-
-    .text-1 p,
-    .text-2 p,
-    .text-3 p {
-        margin: 2%;
-        padding: 10px;
-        font-family: 'Open Sans', sans-serif;
-        font-weight: 100;
-    }
-
-    .text-1 img,
-    .text-2 img,
-    .text-3 img {
-        padding: 10px;
-        width: 100%;
-        height: 50%;
-        border-radius: 20px;
-    }
-}
-
-@media(max-width: 992px) {
-
-    .main .service {
-        text-align: center;
-        font-size: 40px;
-        font-weight: 900;
-        font-family: 'Open Sans', sans-serif;
-        margin-bottom: 30px;
-        margin-left: 22px;
-        color: #eaff00;
-        text-shadow: 3px 3px 6px #000000;
-    }
-
-    .container {
-        font-family: 'Arvo', serif;
-        font-weight: 700;
-        display: grid;
-        grid-template-columns: 240px  240px 240px; 
-        grid-template-rows: auto;
-        gap: 1px;
-        margin-bottom:40px;
-    }
-
-    .text-1,
-    .text-2,
-    .text-3 {
-        padding: 20px;
-        border-radius: 10px;
-        text-align: center;
-    }
-
-    .text-1 .centro,
-    .text-2 .centro,
-    .text-3 .centro {
-        color: #000000;
-        font-size: 35px;
-        text-align: center;
-        padding: 50px 0 0 0;
-        margin-left: 15px;
-        margin-top: -45px;
-    }
-
-    .text-1 p,
-    .text-2 p,
-    .text-3 p {
-        margin: 2%;
-        padding: 10px;
-        font-family: 'Open Sans', sans-serif;
-        font-weight: 100;
-    }
-
-    .text-1 img,
-    .text-2 img,
-    .text-3 img {
-        padding: 10px;
-        width: 100%;
-        height: 40%;
-        border-radius: 20px;
-    }
-}
 
 @media(max-width: 821px) {
 
@@ -526,47 +345,6 @@ body {
     
 }
 
-@media(max-width: 900px) {
-    .footer {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: top;
-        text-align: center;
-        width: 100%;
-        height: 200px auto;
-        margin-top: 20px;
-        padding: 30px;
-        background-color: #000000;
-    }
-
-    .info {
-        margin-bottom: 45px;
-    }
-
-    .info svg {
-        color: #ffffff; 
-        width: 4%;
-        height: 5%;
-        margin: 15px 10px;
-    }
-
-    .redesSociales {
-        margin-bottom: 45px;
-    }
-
-    .redesSociales svg {
-        color: #ffffff; 
-        width: 5%;
-        height: 5%;
-        margin: 15px 10px;
-    }
-
-    .horarios p {
-        margin-bottom: 30px;
-        padding-bottom: 10px;
-    }
-}
 
 @media (min-width: 822px) {
     .navbarPrincipal .menu-icon {
