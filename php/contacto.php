@@ -71,7 +71,7 @@
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d993.921146705964!2d-75.67844722440344!3d4.824116735270984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3880d2ea328081%3A0xc6e237c24e098c48!2sCra.%2021%20%2318-16%2C%20Dosquebradas%2C%20Risaralda!5e0!3m2!1ses!2sco!4v1705448579667!5m2!1ses!2sco"
                 width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
-            <form action="enviar_contacto.php" method="Post">
+            <form action="" method="Post">
                 <input type="email" name="correo" id="correo" placeholder="Correo Electrónico" required>
                 <input type="text" name="asunto" id="asunto" placeholder="Asunto" required>
                 <textarea name="descripcion" id="descripcion" placeholder="Descripción"
