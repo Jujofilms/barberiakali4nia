@@ -30,7 +30,7 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
             <ul>
                 <li><a href="../index.php">Inicio</a></li>
                 <li><a href="">Servicios</a></li>
-                <li><a href="../php/contacto.php">Contacto</a></li>
+                <li><a href="contacto.php">Contacto</a></li>
             </ul>
             <ul>
                 <button onclick="agendar();">
