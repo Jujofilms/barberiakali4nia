@@ -72,8 +72,8 @@
                 width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
             <form action="" method="Post">
-                <input type="text" name="name" id="name" placeholder="Nombre Usuario" required>
-                <input type="text" name="asunto" id=asunto"" placeholder="Asunto" required>
+                <input type="email" name="correo" id="correo" placeholder="Correo Electrónico" required>
+                <input type="text" name="asunto" id="asunto" placeholder="Asunto" required>
                 <textarea name="descripcion" id="descripcion" placeholder="Descripción"
                     required></textarea>
                 <button type="submit">Enviar</button>
