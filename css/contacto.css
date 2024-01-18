@@ -158,6 +158,11 @@ body {
     color: #5eee2c;
 }
 
+.container .map{
+    margin: auto;
+    width: 100%;
+}
+
 .container form{
     display:flex;
     flex-direction:column;  
@@ -187,12 +192,6 @@ body {
     border: 2px solid black;
     outline: none;
     border-radius: 5px;
-}
-
-.container .map{
-    margin: auto;
-    width: 100%;
-    background-color: #000;
 }
 
 .footer {
