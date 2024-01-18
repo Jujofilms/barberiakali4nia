@@ -2,7 +2,7 @@
 include '../../../../config/database.php';
 
 if ($_SERVER["REQUEST_METHOD"] != "POST") {
-    // Redirigir a la página de usuarios si la solicitud no es de tipo POST
+    // Redirigir a la página de servicios si la solicitud no es de tipo POST
     header("location: ../servicios.php");
     exit;
 }
@@ -19,12 +19,20 @@ if (!empty($_FILES['imagen']['tmp_name'])) {
     $imagen_contenido = null; // Sin imagen
 }
 
+// Obtener el valor actual de "servicios" de la tabla "valores"
+$result = mysqli_query($conexion, "SELECT servicios FROM valores WHERE id = '1'");
+$row = mysqli_fetch_assoc($result);
+$valor_actual_servicios = $row['servicios'];
+
+// Calcular el nuevo valor de "servicios" para la actualización
+$nuevo_valor_servicios = $valor_actual_servicios + 1;
+
 $query = "INSERT INTO servicios(imagen, nombre, descripcion, precio)
           VALUES('$imagen_contenido', '$nombre', '$descripcion', '$precio')";
 
-$verificacion_correo = mysqli_query($conexion, "SELECT * FROM servicios WHERE nombre='$nombre' "); //verificación de correo
+$verificacion_servicio = mysqli_query($conexion, "SELECT * FROM servicios WHERE nombre='$nombre' ");
 
-if (mysqli_num_rows($verificacion_correo) > 0) { //hace la función de verificación de correo con la db
+if (mysqli_num_rows($verificacion_servicio) > 0) {
     echo '
         <script>
             alert("El servicio ya existe. Intente con otro diferente❌");
@@ -32,23 +40,25 @@ if (mysqli_num_rows($verificacion_correo) > 0) { //hace la función de verificac
         </script>
     ';
     exit;
-    mysqli_close($conexion); //cerramos la conexión si esta función se cumple
+    mysqli_close($conexion);
 }
 
 $ejecutar = mysqli_query($conexion, $query);
 
 if ($ejecutar) {
+    // Actualizar el valor de "servicios" en la tabla "valores"
+    $actualizacion_servicios = "UPDATE valores SET servicios = '$nuevo_valor_servicios' WHERE id = '1'";
+    $ejecutar_actualizacion = mysqli_query($conexion, $actualizacion_servicios);
+
     header("location: ../../servicios.php");
 } else {
     echo '
         <script>
-            alert("El registro del servicio no sali bien.");
+            alert("El registro del servicio no salió bien.");
             window.location = "servicios.php";
         </script>
-    '; //si nada se cumple, entonces no se registra
+    ';
 }
 
 mysqli_close($conexion);
-
-// Código hecho por Juan José Molina de (JUJOFILMS STUDIOS CC)
 ?>

@@ -9,6 +9,10 @@ if (!isset($_SESSION['ingreso_admin'])) {
     exit;
 }
 //fin de codigo
+include_once('../../config/database.php');
+
+$consulta_datos = "SELECT * FROM valores";
+$resultado = mysqli_query($conexion, $consulta_datos);
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +25,7 @@ if (!isset($_SESSION['ingreso_admin'])) {
     <meta name="description" content="Solo puedes ingresar si ha iniciado sesión">
     <title>KALI4NIA</title>
     <link rel="icon" href="../../img/logo.png">
-    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/panel.css">
 </head>
 
 <body>
@@ -41,30 +45,35 @@ if (!isset($_SESSION['ingreso_admin'])) {
 
     <!-- panel de control (valores de ingres y demas cosas) -->
 
+    <?php 
+    //Valores que hay en la base de datos
+    while ($row = mysqli_fetch_assoc($resultado)){
+    ?>
     <div class="cifras">
         <div class="contenido-cifras">
             <div class="relleno-cifra">
-                <h1>BARBEROS</h1>
-                <h1>2001</h1>
+                <h1>USUARIOS</h1>
+                <h1><?php echo $row['barberos']; ?></h1>
             </div>
             <div class="relleno-cifra-1">
                 <h1>CITAS</h1>
-                <h1>2001</h1>
+                <h1>12345</h1>
             </div>
-            <div class="relleno-cifra-2">
+            <div class="relleno-cifra">
                 <h1>CITAS LISTAS</h1>
                 <h1>20001</h1>
             </div>
-            <div class="relleno-cifra-3">
+            <div class="relleno-cifra-1">
                 <h1>SERVICIOS</h1>
-                <h1>2001</h1>
+                <h1><?php echo $row['servicios']; ?></h1>
             </div>
-            <div class="relleno-cifra-4">
+            <div class="relleno-cifra">
                 <h1>INGRESOS</h1>
                 <h1>2001</h1>
             </div>
         </div>
     </div>
+    <?php } ?>
 
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda nobis impedit ipsum eligendi, officiis mollitia rem a veritatis sunt temporibus sit vel veniam quas quibusdam unde quam dignissimos, aperiam eum.
     Adipisci laboriosam vel eveniet ipsa ut asperiores voluptate molestias dignissimos eligendi aliquam! Amet incidunt animi illo culpa optio exercitationem enim distinctio quam quod, perspiciatis vitae dolorem ullam? Quisquam, a velit.
