@@ -169,5 +169,4 @@
         window.location.href = "../php/servicios.php";
     }
 </script>
-
 </html>
