@@ -29,8 +29,8 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
             <img src="../img/logo.png" alt="logo" class="img-logo">
             <ul>
                 <li><a href="../index.php">Inicio</a></li>
-                <li><a href="">Servicios</a></li>
-                <li><a href="../php/contacto.php">Contacto</a></li>
+                <li><a href="servicios.php">Servicios</a></li>
+                <li><a href="contacto.php">Contacto</a></li>
             </ul>
             <ul>
                 <button onclick="agendar();">
