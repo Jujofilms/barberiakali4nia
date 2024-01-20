@@ -2,7 +2,7 @@
 session_start();
 
 // Verificar la sesión
-if (!isset($_SESSION['ingreso_admin'])) {
+if (!isset($_SESSION['ingreso_barbero'])) {
     header("location: ../../index.php");
     exit;
 }
@@ -10,8 +10,8 @@ if (!isset($_SESSION['ingreso_admin'])) {
 require '../../config/database.php';
 
 // Consulta SQL para obtener la información de la tabla 'barbero'
-$correo = $_SESSION['ingreso_admin'];
-$sql = "SELECT id, nombre, correo, imagen, administrador, barbero FROM barbero WHERE correo = '$correo'";
+$correo = $_SESSION['ingreso_barbero'];
+$sql = "SELECT id, nombre, correo, imagen, administrador, barbero FROM barbero WHERE nombre = '$correo'";
 $resultado = $conexion->query($sql);
 
 // Comprobar si se encontraron registros
@@ -43,7 +43,7 @@ $conexion->close();
     <meta name="description" content="Solo puedes ingresar si ha iniciado sesión">
     <title>KALI4NIA</title>
     <link rel="icon" href="../../img/logo.png">
-    <link rel="stylesheet" href="assets/css/mi_cuenta.css">
+    <link rel="stylesheet" href="../admin/assets/css/mi_cuenta.css">
 </head>
 
 <body>
@@ -51,11 +51,7 @@ $conexion->close();
 
     <div class="navbar">
         <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
-        <a href="index.php">Panel</a>
-        <a href="servicios.php">Servicios</a>
-        <a href="usuarios.php">Usuarios</a>
-        <a href="agenda_completa.php">Agenda Completa</a>
-        <a href="mi_agenda.php">Mi Agenda</a>
+        <a href="index.php">Agenda</a>
         <a href="mi_cuenta.php">Mi Cuenta</a>
         <a href="../../php/cerrar_sesion.php" class="logout-button">Cerrar Sesión</a>
     </div>
@@ -75,7 +71,7 @@ $conexion->close();
                 <?php echo $esAdministrador . " " . $esBarbero; ?>
             </p>
             <!-- Botón de editar -->
-            <a href="assets/forms/editar_cuenta.php?id=<?php echo $id; ?>" class="edit-button">EDITAR</a>
+            <a href="editar_cuenta.php?id=<?php echo $id; ?>" class="edit-button">EDITAR</a>
         </div>
     </div>
 

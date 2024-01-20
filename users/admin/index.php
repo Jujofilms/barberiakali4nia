@@ -36,9 +36,8 @@ $resultado = mysqli_query($conexion, $consulta_datos);
         <a href="index.php">Panel</a>
         <a href="servicios.php">Servicios</a>
         <a href="usuarios.php">Usuarios</a>
-        <a href="#agenda-completa">Agenda Completa</a>
-        <a href="#mi-agenda">Mi Agenda</a>
-        <a href="#caja">Caja</a>
+        <a href="agenda_completa.php">Agenda Completa</a>
+        <a href="mi_agenda.php">Mi Agenda</a>
         <a href="mi_cuenta.php">Mi Cuenta</a>
         <a href="../../php/cerrar_sesion.php" class="logout-button">Cerrar Sesión</a>
     </div>

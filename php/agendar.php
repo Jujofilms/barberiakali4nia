@@ -6,7 +6,7 @@ session_start();
 include_once('../config/database.php');
 
 // Obtener datos de la tabla "barbero"
-$query = "SELECT * FROM barbero";
+$query = "SELECT * FROM barbero WHERE activo = '1'";
 $result = mysqli_query($conexion, $query);
 
 // Obtener datos de la tabla "servicios"

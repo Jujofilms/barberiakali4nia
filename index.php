@@ -56,15 +56,13 @@
             <div class="textPrincipal">
                 <h1 class="centro">¿Quiénes Somos?</h1>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, laborum quam quasi odit nihil aut
-                    architecto? Unde nesciunt voluptatem, eaque aliquam maxime numquam vel, quis voluptate cupiditate
-                    ipsum quae est.
-                    Modi eaque adipisci blanditiis, repudiandae distinctio labore dolore tenetur recusandae odit iure
-                    inventore quos consequuntur dignissimos voluptatem ullam suscipit laudantium quae illum officiis! Id
-                    nesciunt nam quasi quibusdam odio sunt?
-                    Sequi similique assumenda rerum ad. Fuga odio distinctio nostrum eaque labore beatae nobis
-                    laboriosam voluptatum, nesciunt corporis. Saepe nesciunt ut cupiditate. Explicabo, inventore facere.
-                    Incidunt qui illum eum amet sunt.
+                    En Barbería Kali4nia, no solo ofrecemos servicios de barbería, sino una experiencia completa donde
+                    la comodidad y el estilo se fusionan para brindarte un momento único de cuidado personal. Nos
+                    enorgullece proporcionar un ambiente relajado y acogedor, donde nuestros clientes pueden disfrutar
+                    de servicios de alta calidad mientras se sumergen en un estilo que refleja su personalidad.
+                    Déjanos ser tu destino preferido para el cuidado del cabello y la barba. Descubre la diferencia que
+                    una barbería centrada en la comodidad y el estilo puede hacer en tu rutina de cuidado personal.
+                    ¡Bienvenido a Barbería Kali4nia, donde tu comodidad y estilo son nuestra máxima prioridad!
                 </p>
                 <img src="img/text-principal.jpg" alt="Texto principal">
             </div>
@@ -72,15 +70,15 @@
             <div class="textSecundario">
                 <h1 class="centro-1">Servicios</h1>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, laborum quam quasi odit nihil aut
-                    architecto? Unde nesciunt voluptatem, eaque aliquam maxime numquam vel, quis voluptate cupiditate
-                    ipsum quae est.
-                    Modi eaque adipisci blanditiis, repudiandae distinctio labore dolore tenetur recusandae odit iure
-                    inventore quos consequuntur dignissimos voluptatem ullam suscipit laudantium quae illum officiis! Id
-                    nesciunt nam quasi quibusdam odio sunt?
-                    Sequi similique assumenda rerum ad. Fuga odio distinctio nostrum eaque labore beatae nobis
-                    laboriosam voluptatum, nesciunt corporis. Saepe nesciunt ut cupiditate. Explicabo, inventore facere.
-                    Incidunt qui illum eum amet sunt.
+                    En Barbería Kali4nia, nos enorgullece afirmar que nuestros servicios son incomparables y estamos
+                    comprometidos en ofrecer lo mejor a nuestros clientes. Con una destacada lista de estilos, nuestros
+                    barberos expertos no solo siguen las últimas tendencias, sino que también están capacitados para
+                    crear looks personalizados que se adapten perfectamente a tu individualidad.
+
+                    Desde cortes clásicos que resaltan tu elegancia hasta estilos modernos y vanguardistas que expresan
+                    tu creatividad, en Barbería Kali4nia entendemos que cada cliente es único. Nuestro equipo está
+                    dedicado a proporcionar servicios de la más alta calidad, asegurándonos de que te sientas satisfecho
+                    y seguro con tu apariencia.
                 </p>
                 <button onclick="servicio();">Conoce Nuestros Servicios</button>
                 <img src="img/text-secundary.jpg" alt="">
@@ -99,7 +97,7 @@
                         d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10" />
                     <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
                 </svg>
-                 Cra. 21 #18-16 Av. Santa Monica
+                Cra. 21 #18-16 Av. Santa Monica
             </p>
             <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                     class="bi bi-telephone" viewBox="0 0 16 16">
