@@ -10,7 +10,7 @@ if (!isset($_SESSION['ingreso_admin'])) {
 require '../../config/database.php';
 
 // Consulta SQL para obtener la información de la tabla 'barbero'
-$correo = $_SESSION['ingreso_admin'];
+$correo = $_SESSION['ingreso_correo'];
 $sql = "SELECT id, nombre, correo, imagen, administrador, barbero FROM barbero WHERE correo = '$correo'";
 $resultado = $conexion->query($sql);
 

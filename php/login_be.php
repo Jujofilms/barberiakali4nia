@@ -44,7 +44,7 @@ if (mysqli_num_rows($validacion_login) > 0) {
 
         if ($barbero == 1) {
             if ($bloqueo == 0) {
-                $_SESSION['ingreso_barbero'] = $nombre;
+                $_SESSION['ingreso_barbero'] = $correo;
                 header("location: ../users/barbero/index.php");
             } else {
                 mostrarMensajeError("Barbero " . $nombre . " su cuenta ha sido bloqueada por un administrador");
@@ -52,6 +52,7 @@ if (mysqli_num_rows($validacion_login) > 0) {
         } elseif ($admin == 1) {
             if ($bloqueo == 0) {
                 $_SESSION['ingreso_admin'] = $nombre;
+                $_SESSION['ingreso_correo'] = $correo;
                 header("location: ../users/admin/index.php");
             } else {
                 mostrarMensajeError("Administrador " . $nombre . " su cuenta ha sido bloqueada por el administrador principal");

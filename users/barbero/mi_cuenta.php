@@ -11,7 +11,7 @@ require '../../config/database.php';
 
 // Consulta SQL para obtener la información de la tabla 'barbero'
 $correo = $_SESSION['ingreso_barbero'];
-$sql = "SELECT id, nombre, correo, imagen, administrador, barbero FROM barbero WHERE nombre = '$correo'";
+$sql = "SELECT id, nombre, correo, imagen, administrador, barbero FROM barbero WHERE correo = '$correo'";
 $resultado = $conexion->query($sql);
 
 // Comprobar si se encontraron registros
