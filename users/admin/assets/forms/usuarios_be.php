@@ -13,6 +13,7 @@ $contrasena = password_hash($_POST['contrasena'], PASSWORD_DEFAULT);
 $barbero = isset($_POST['barber']) ? 1 : 0;
 $administrador = isset($_POST['administrador']) ? 1 : 0;
 $id = 1;
+$activo = 1;
 
 // Procesar la carga de la imagen
 if (!empty($_FILES['imagen']['tmp_name'])) {
@@ -31,8 +32,8 @@ $valor_actual_barberos = $row['barberos'];
 $nuevo_valor_barberos = $valor_actual_barberos + 1;
 
 // Consulta de inserción en la tabla "barbero"
-$query = "INSERT INTO barbero(nombre, correo, contrasena, barbero, administrador, bloqueo, token, imagen)
-          VALUES('$nombre', '$correo', '$contrasena', '$barbero', '$administrador', '0', '0', '$imagen_contenido')";
+$query = "INSERT INTO barbero(nombre, correo, contrasena, barbero, administrador, bloqueo, token, imagen, activo)
+          VALUES('$nombre', '$correo', '$contrasena', '$barbero', '$administrador', '0', '0', '$imagen_contenido', '$activo')";
 
 // Consulta de actualización en la tabla "valores"
 $actualizacion_usuarios = "UPDATE valores SET barberos = '$nuevo_valor_barberos' WHERE id = '$id'";
