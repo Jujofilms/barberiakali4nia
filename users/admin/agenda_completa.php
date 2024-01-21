@@ -97,7 +97,7 @@ $result = mysqli_query($conexion, $query);
         <a href="servicios.php">Servicios</a>
         <a href="usuarios.php">Usuarios</a>
         <a href="agenda_completa">Agenda Completa</a>
-        <a href="mi_agenda">Mi Agenda</a>
+        <a href="mi_agenda.php">Mi Agenda</a>
         <a href="mi_cuenta.php">Mi Cuenta</a>
         <a href="../../php/cerrar_sesion.php" class="logout-button">Cerrar Sesión</a>
     </div>
@@ -137,6 +137,13 @@ $result = mysqli_query($conexion, $query);
             </tbody>
         </table>
     </div>
+
+    <script>
+        function toggleMenu() {
+            var navbar = document.querySelector('.navbar');
+            navbar.classList.toggle('show-menu');
+        }
+    </script>
 </body>
 
 </html>

@@ -135,6 +135,13 @@ $result = mysqli_query($conexion, $query);
             </tbody>
         </table>
     </div>
+
+    <script>
+        function toggleMenu() {
+            var navbar = document.querySelector('.navbar');
+            navbar.classList.toggle('show-menu');
+        }
+    </script>
 </body>
 
 </html>
