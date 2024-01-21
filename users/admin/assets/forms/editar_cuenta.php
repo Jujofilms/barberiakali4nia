@@ -143,7 +143,7 @@ $conexion->close();
             Imagen: <input type="file" name="imagen"><br>
             <br>
             <input type="submit" value="ACTUALIZAR">
-            <a href="mi_cuenta.php" class="cancel-button">CANCELAR</a>
+            <a href="../../mi_cuenta.php" class="cancel-button">CANCELAR</a>
         </form>
     </div>
 
